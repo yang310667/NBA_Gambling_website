@@ -1,0 +1,126 @@
+<!DOCTYPE html>  
+{% if logged_in %}
+<html>  
+<head>  
+    <title>List</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles_index.css') }}">  
+    <style>
+        body {
+            text-align: center;
+        }
+
+    </style>
+</head>  
+<body class="left_body">  
+    <header>
+        <h2 class="logo">NBA 運彩下注網</h2>
+        <nav class="navigation">
+            <a href="/view">比賽資訊</a>
+            <a href="/team">季後賽球隊資訊</a>
+            <a href="/player">季後賽球員資訊</a>
+            <a href="/money_in_out">出入金</a>
+            <a href="/gameplay">下注玩法</a>
+            <a href="/member_infor">會員資料</a>
+            <a href="/logout">登出</a>
+        </nav>
+    </header>
+    <h3>下注玩法</h3><br>  
+    <table>   
+            {% for row in rows %}
+                <tr style="font-size: 20px; background-color: rgb(198, 198, 198);">  
+                    <th>賽事編號</th>
+                    <th>主隊</th>
+                    <th>客隊</th>  
+                    <th>比賽日期</th>
+                </tr>  
+                <tr style="font-size: 20px;" >  
+                    <td>{{ row["matchId"] }}</td>
+                    <td>{{ row["home"] }}</td>
+                    <td>{{ row["away"] }}</td>   
+                    <td>{{ row["date"] }}</td>
+                </tr>
+                <tr>  
+                    <th>賽事編號</th>
+                    <th>賽事種類</th>
+                    <th>下注玩法</th>  
+                    <th>賠率</th>
+                </tr>
+                {% for result in results %}
+                    {% if result["matchId"] == row["matchId"] %}
+                    <tr>
+                        <td>{{ result["matchId"] }}</td>
+                        <td>{{ result["gametype"] }}</td>
+                        <td>{{ result["gamble"] }}</td>   
+                        <td>{{ result["line"] }}</td>
+                    </tr>
+                    {% endif %}
+                
+                {% endfor %}  
+            {% endfor %}  
+    </table>  
+    <br><br>  
+    <a href="/index_in">Go back to home page</a>  
+</body>  
+</html>
+{% else %}
+<html>  
+<head>  
+    <title>List</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles_index.css') }}">  
+    <style>
+        body {
+            text-align: center;
+        }
+
+    </style>
+</head>  
+<body class="left_body">  
+    <header> 
+        <h2 class="logo">豬逼運彩下注網</h2>
+        <nav class="navigation">
+            <a href ="/view">比賽資訊</a>
+            <a href="/team">季後賽球隊資訊</a>
+            <a href="/player">季後賽球員資訊</a>
+            <a href="/login">會員登入</a>
+            <a href="/gameplay">下注玩法</a>
+        </nav>
+    </header>
+    <h3>下注玩法</h3><br>  
+    <table>   
+            {% for row in rows %}
+                <tr style="font-size: 20px; background-color: rgb(198, 198, 198);">  
+                    <th>賽事編號</th>
+                    <th>主隊</th>
+                    <th>客隊</th>  
+                    <th>比賽日期</th>
+                </tr>  
+                <tr style="font-size: 20px;" >  
+                    <td>{{ row["matchId"] }}</td>
+                    <td>{{ row["home"] }}</td>
+                    <td>{{ row["away"] }}</td>   
+                    <td>{{ row["date"] }}</td>
+                </tr>
+                <tr>  
+                    <th>賽事編號</th>
+                    <th>賽事種類</th>
+                    <th>下注玩法</th>  
+                    <th>賠率</th>
+                </tr>
+                {% for result in results %}
+                    {% if result["matchId"] == row["matchId"] %}
+                    <tr>
+                        <td>{{ result["matchId"] }}</td>
+                        <td>{{ result["gametype"] }}</td>
+                        <td>{{ result["gamble"] }}</td>   
+                        <td>{{ result["line"] }}</td>
+                    </tr>
+                    {% endif %}
+                
+                {% endfor %}  
+            {% endfor %}  
+    </table>  
+    <br><br>  
+    <a href="/">Go back to home page</a>  
+</body>  
+</html>
+{% endif %}

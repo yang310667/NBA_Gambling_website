@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Error</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        .error-message {
+            text-align: center;
+            color: red;
+        }
+    </style>
+</head>
+<body class="center_body">
+    <h2 class="error-message">{{ error_message }}</h2>
+</body>
+</html>

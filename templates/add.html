@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>會員註冊</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="{{ url_for('static',filename='styles_index.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static',filename='styles_add.css') }}">
+</head>
+<body class="left_body">
+  <header> 
+    <h2 class="logo">NBA 運彩下注網</h2>
+    <nav class="navigation">
+        <a href ="/view">比賽資訊</a>
+        <a href="/team">季後賽球隊資訊</a>
+        <a href="/player">季後賽球員資訊</a>
+        <a href="/login">會員登入</a>
+        <a href="/gameplay">下注玩法</a>
+    </nav>
+</header>
+<div class="add-container">
+  <h2>會員註冊</h2>
+  <form  action="/savedetails" method="POST">
+    <label for="memberId">會員信箱：</label>
+    <input type="email"  name="memberId" required><br><br>
+    <label for="password">密碼：</label>
+    <input type="password"  name="password" required><br><br>
+
+    <label for="birthday">生日：</label>
+    <input type="date"  name="birthday" required><br><br>
+
+    <label for="identity">身分證：</label>
+    <input type="text"  name="identity" required><br><br>
+
+    <label for="account">帳戶：</label>
+    <input type="text" name="account" required><br><br>
+
+    <input type="submit" value="submit" name="submit">
+  </form>
+</div>
+</body>
+</html>

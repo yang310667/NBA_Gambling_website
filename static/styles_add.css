@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+  }
+  
+  .add-container {
+    width: 600px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 5px;
+    color: #666;
+  }
+  
+  input[name="memberId"],
+  input[name="password"],
+  input[name="birthday"],
+  input[name="identity"],
+  input[name="account"] {
+    padding: 10px;
+    border-radius: 3px;
+    font-size:14px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+  
+  input[name="submit"] {
+    background-color: #FF0000;
+    color: #fff;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+
+  }
+  
+  button[id="login"]:hover {
+    background-color: #45a049;
+  }
+  .register{
+    background: #fff;
+    color: #2b12ed;
+    padding: 10px;
+    font-size: 12px;
+    border:none;
+    text-align: right;
+
+
+
+  }
+
+  input[id="register"] {
+    background-color: #e6ebe7;
+    color: #2b12ed;
+    padding: 15px;
+    font-size: 10px;
+    border: none;
+    cursor: pointer;
+    text-align: right
+
+  }
+  
+  #message {
+    text-align: center;
+    color: #FF0000;
+    margin-top: 10px;
+  }
+  

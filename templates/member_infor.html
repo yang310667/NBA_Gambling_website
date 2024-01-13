@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flask Home</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles_index.css') }}">
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .center_body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .profile-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f2f2f2;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        .profile-info {
+            margin-bottom: 20px;
+        }
+        .profile-info p {
+            margin: 5px 0;
+        }
+        .profile-info p span {
+            font-weight: bold;
+        }
+        .profile-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .profile-actions a {
+            text-decoration: none;
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        .profile-actions a:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body class="center_body">
+    <header>
+        <h2 class="logo">NBA 運彩下注網</h2>
+        <nav class="navigation">
+            <a href="/view">比賽資訊</a>
+            <a href="/team">季後賽球隊資訊</a>
+            <a href="/player">季後賽球員資訊</a>
+            <a href="/money_in_out">出入金</a>
+            <a href="/bet_index">下注</a>
+            <a href="/member_infor">會員資料</a>
+            <a href="/logout">登出</a>
+        </nav>
+    </header>
+
+    <div class="profile-container">
+        <img class="profile-picture" src="{{ url_for('static', filename='profile_picture.png') }}" alt="Profile Picture">
+        <div class="profile-info">
+            <p><span>會員帳號：</span>{{ user_id }}</p>
+            <p><span>現有金額：</span>{{ current_money }}</p>
+            <p><span>儲值次數：</span>{{ in_money_time }}</p>
+            <p><span>提領次數：</span>{{ out_money_time }}</p>
+            <p><span>下注次數：</span>{{ gamble_time }}</p>
+        </div>
+        <div class="profile-actions">
+            <a href="/bet_record">下注紀錄查詢</a>
+            <a href="/operate_win">發放獎金</a>
+        </div>
+    </div>
+
+</body>
+</html>

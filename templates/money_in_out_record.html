@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Money Records</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles_index.css') }}">
+    <style>
+        .record-title {
+            text-align: center;
+            font-size: 24px;
+        }
+
+        table {
+            width: 80%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            border: 1px solid black;  
+        }
+
+        th,
+        td {
+            padding: 8px;
+            border: 1px solid black;  
+            text-align: center;  /* 將內容置中對齊 */
+        }
+
+        th.amount-header {
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="center_body">
+    <header>
+        <h2 class="logo">NBA 運彩下注網</h2>
+        <nav class="navigation">
+            <a href="/view">比賽資訊</a>
+            <a href="/team">季後賽球隊資訊</a>
+            <a href="/player">季後賽球員資訊</a>
+            <a href="/money_in_out">出入金</a>
+            <a href="/bet_index">下注</a>
+            <a href="/member_infor">會員資料</a>
+            <a href="/logout">登出</a>
+        </nav>
+    </header>
+
+    <table>
+        <thead>
+            <tr>
+                <th colspan="3" class="record-title">個人出入金紀錄</th>
+            </tr>
+            <tr>
+                <th class="column-header">操作</th>
+                <th class="column-header amount-header">金額</th>
+                <th class="column-header">時間</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for record in records %}
+            <tr>
+                <td>{{ record[0] }}</td>
+                <td>{{ record[1] }}</td>
+                <td>{{ record[2] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

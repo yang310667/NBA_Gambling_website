@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+{% if logged_in  %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="{{ url_for('static',filename='styles_index.css') }}">  
+        <title> NBA 季後賽球隊資訊 </title>
+        <style>
+            body {
+                text-align: center;
+            }
+            
+            table {
+                border-collapse: collapse;
+                width: 100%;
+                margin-top: 20px;
+            }
+            
+            th, td {
+                padding: 10px;
+            }
+            
+            th {
+                background-color: rgb(198, 198, 198);
+                font-size: 20px;
+            }
+            
+            tbody tr:nth-child(4n)::after {
+                content: "";
+                display: table-row;
+                border-bottom: 1px solid black;
+            }
+            
+        </style>
+    </head>
+    <body class="left_body"> 
+        <header>
+            <h2 class="logo">NBA 運彩下注網</h2>
+            <nav class="navigation">
+                <a href="/view">比賽資訊</a>
+                <a href="/team">季後賽球隊資訊</a>
+                <a href="/player">季後賽球員資訊</a>
+                <a href="/money_in_out">出入金</a>
+                <a href="/bet_index">下注</a>
+                <a href="/member_infor">會員資料</a>
+                <a href="/logout">登出</a>
+            </nav>
+        </header>
+        <h1>NBA 季後賽球員資訊</h1>
+        <table>  
+            <tr style="font-size: 20px; background-color: rgb(198, 198, 198);">  
+                <td>球員名</td>
+                <td>位置</td>
+                <td>年齡</td>  
+                <td>球隊名</td>
+                <td>薪資</td>
+            </tr>  
+            
+            {% for row in rows %}  
+            
+                <tr>  
+                    <td>{{row["球員名"]}}</td>
+                    <td>{{row["位置"]}}</td>
+                    <td>{{row["年齡"]}}</td>   
+                    <td>{{row["球隊名"]}}</td>
+                    <td>{{row["薪資"]}}</td>
+                </tr>  
+            
+            {% endfor %}  
+        </table>  
+    
+    
+    
+    </body>      
+</html>
+{% else %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="{{ url_for('static',filename='styles_index.css') }}">  
+        <title> NBA 季後賽球隊資訊 </title>
+        <style>
+            body {
+                text-align: center;
+            }
+            
+            table {
+                border-collapse: collapse;
+                width: 100%;
+                margin-top: 20px;
+            }
+            
+            th, td {
+                padding: 10px;
+            }
+            
+            th {
+                background-color: rgb(198, 198, 198);
+                font-size: 20px;
+            }
+            
+            tbody tr:nth-child(4n)::after {
+                content: "";
+                display: table-row;
+                border-bottom: 1px solid black;
+            }
+            
+        </style>
+    </head>
+    <body class="left_body"> 
+        <header> 
+            <h2 class="logo">豬逼運彩下注網</h2>
+            <nav class="navigation">
+                <a href ="/view">比賽資訊</a>
+                <a href="/team">季後賽球隊資訊</a>
+                <a href="/player">季後賽球員資訊</a>
+                <a href="/login">會員登入</a>
+                <a href="/gameplay">下注玩法</a>
+            </nav>
+        </header>
+        <h1>NBA 季後賽球員資訊</h1>
+        <table>  
+            <tr style="font-size: 20px; background-color: rgb(198, 198, 198);">  
+                <td>球員名</td>
+                <td>位置</td>
+                <td>年齡</td>  
+                <td>球隊名</td>
+                <td>薪資</td>
+            </tr>  
+            
+            {% for row in rows %}  
+            
+                <tr>  
+                    <td>{{row["球員名"]}}</td>
+                    <td>{{row["位置"]}}</td>
+                    <td>{{row["年齡"]}}</td>   
+                    <td>{{row["球隊名"]}}</td>
+                    <td>{{row["薪資"]}}</td>
+                </tr>  
+            
+            {% endfor %}  
+        </table>  
+    
+    
+    
+    </body>      
+</html>
+{% endif %}

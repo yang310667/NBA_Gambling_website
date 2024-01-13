@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>  
+<head>  
+<title>Flask Home</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="{{ url_for('static',filename='styles_index.css') }}">
+<link rel="stylesheet" href="{{ url_for('static',filename='styles_money_in_out.css') }}">
+<style>
+</style>  
+</head>  
+<body class="center_body"> 
+    <header> 
+        <h2 class="logo">NBA 運彩下注網</h2>
+        <nav class="navigation">
+            <a href ="/view">比賽資訊</a>
+            <a href="/team">季後賽球隊資訊</a>
+            <a href="/player">季後賽球員資訊</a>
+            <a href="/money_in_out">出入金</a>
+            <a href="/bet_index">下注</a>
+            <a href="/member_infor">會員資料</a>
+            <a href="/logout">登出</a>
+        </nav>
+    </header>
+    <div class="login-container">
+    <form method="POST" action="/money_add">
+        <label for="action">選擇操作：</label>
+        <select name="action" required>
+            <option value="deposit">匯入</option>
+            <option value="withdraw">提領</option>
+        </select><br><br>
+        
+        <label for="money">金額：</label>
+        <input type="number" name="money" required><br><br>
+        
+        <label for="password">密碼：</label>
+        <input type="password" name="password" required><br><br>
+        
+        <button type="submit" class="submit" id="login">提交</button>
+        <button type="button" class="register" onclick="window.location.href='/money_in_out_record'">出入金紀錄</button>
+        <div>
+</body>  
+</html>

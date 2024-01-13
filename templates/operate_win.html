@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>List</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles_index.css') }}">
+</head>
+<body class="left_body">
+    <header>
+        <h2 class="logo">NBA 運彩下注網</h2>
+        <nav class="navigation">
+            <a href="/view">比賽資訊</a>
+            <a href="/team">季後賽球隊資訊</a>
+            <a href="/player">季後賽球員資訊</a>
+            <a href="/money_in_out">出入金</a>
+            <a href="/bet_index">下注</a>
+            <a href="/member_infor">會員資料</a>
+            <a href="/logout">登出</a>
+        </nav>
+    </header>
+
+    <h3>操作頁面</h3><br>
+
+    <body class="center_body">
+
+        <form method="POST" action="/operate_success">
+            <label for="single">賽事編號：</label>
+            <input type="single" name="single" required><br><br>
+            <label for="project">項目：</label>
+            <input type="project" name="project" required><br><br>
+            <button type="submit" class="submit">匯入</button>
+        
+
+    </body>
+</html>
