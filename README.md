@@ -16,6 +16,12 @@ This repository is about NBA playoff gambling system in 2023
 * The information of gambling
 * Bet on the match
 
+## Quick Start
+Open the "DMBS" file and start the service by executing command in "app.py"
+
+
+```python app.py```
+![start_service](start_service.jpg)
 ## Web Pages
 
 ### Information of games
