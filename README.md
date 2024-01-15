@@ -10,10 +10,17 @@ This repository is about NBA playoff gambling system in 2023
 ![process](process.jpg)
 
 ## Different Functionality in the website 
-* Search the information of game/players
+* Search the information of games(series/single matches)
 * Register the membership
 * Deposit money to the account
-* 
+* The information of gambling
+* Bet on the match
+
+## Web Pages
+
+### Information of games
+
+**Series**
 
 
 
