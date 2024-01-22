@@ -4,7 +4,7 @@ This repository is about NBA playoff gambling system in 2023
 
 ## Project Overview
 * Utilized Python Flask as the backend server
-* Used sqlite as the database system, and sqlite3 library to connect
+* All of the data is stored in database SQLite, connecting and operating by python library 'sqlite3'
 * Use HTML, CSS to design the website
 
 ![process](process.jpg)
