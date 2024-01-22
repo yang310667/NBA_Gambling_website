@@ -21,12 +21,50 @@ Open the "DMBS" file and start the service by executing command in "app.py"
 
 
 ```python app.py```
-![start_service](start_service.jpg)
+
 ## Web Pages
 
-### Information of games
+After input the URL in the browser
 
-**Series**
+### First Page
+
+![image](https://github.com/yang310667/NBA_gambling_website/blob/main/web_picture/first_page.png)
+
+### Game information
+
+**series**
+![image](https://github.com/yang310667/NBA_gambling_website/blob/main/web_picture/match_series.png)
+**single matches**
+![image](https://github.com/yang310667/NBA_gambling_website/blob/main/web_picture/match_single.png)
+
+### Team/Player information
+
+**Team**
+![image](https://github.com/yang310667/NBA_gambling_website/blob/main/web_picture/team.png)
+
+**Player**
+![image](https://github.com/yang310667/NBA_gambling_website/blob/main/web_picture/player.png)
+
+### Bet information
+
+![image](https://github.com/yang310667/NBA_gambling_website/blob/main/web_picture/bet.png)
+
+### Login page
+
+![image](https://github.com/yang310667/NBA_gambling_website/blob/main/web_picture/login.png)
+
+### Deposit/Withdraw money
+
+![image](https://github.com/yang310667/NBA_gambling_website/blob/main/web_picture/in_out.png)
+
+### Betting
+
+![image](https://github.com/yang310667/NBA_gambling_website/blob/main/web_picture/bet_money.png)
+
+### Member information
+![image](https://github.com/yang310667/NBA_gambling_website/blob/main/web_picture/member_info.png)
+
+
 
 
 
