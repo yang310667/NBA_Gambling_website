@@ -1,4 +1,4 @@
-# NBA Gambling Website
+# NBA Lottery Website
 
 This repository is about NBA playoff gambling system in 2023
 
